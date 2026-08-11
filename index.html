@@ -8,6 +8,27 @@
   <title>Business Solution Consult | Insights. Strategy. Growth.</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
+  <!-- Ties the social profiles to the brand for search engines. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Business Solution Consult",
+    "slogan": "Insights. Strategy. Growth.",
+    "url": "https://www.businesssolutionconsult.com",
+    "logo": "https://www.businesssolutionconsult.com/favicon.svg",
+    "email": "info@businesssolutionconsult.com",
+    "telephone": "+233244432837",
+    "address": { "@type": "PostalAddress", "addressCountry": "GH" },
+    "sameAs": [
+      "https://www.linkedin.com/company/bsconsultgh",
+      "https://www.facebook.com/bsconsultgh",
+      "https://www.instagram.com/bsconsultgh_",
+      "https://www.youtube.com/@bsconsultgh"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -607,9 +628,34 @@
     .contact-copy > p { max-width: 480px; margin: 24px 0 38px; color: rgba(255, 255, 255, 0.72); font-size: 18px; }
 
     .contact-list { display: grid; gap: 15px; margin: 0; padding: 28px 0 0; border-top: 1px solid rgba(255, 255, 255, 0.18); list-style: none; }
-    .contact-list li { display: grid; grid-template-columns: 72px 1fr; gap: 14px; align-items: baseline; }
+    .contact-list > li { display: grid; grid-template-columns: 72px 1fr; gap: 14px; align-items: baseline; }
     .contact-list span { color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
     .contact-list a { overflow-wrap: anywhere; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+    .contact-list .contact-social { align-items: center; }
+
+    .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+
+    .social-links a {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+    }
+
+    .social-links a:hover, .social-links a:focus-visible {
+      color: var(--navy);
+      border-color: var(--gold);
+      background: var(--gold);
+    }
+
+    .social-links svg { width: 18px; height: 18px; fill: currentColor; }
 
     .contact-form { padding: clamp(40px, 7vw, 84px); color: var(--navy); background: var(--white); }
     .form-title { margin-bottom: 30px; font-size: 34px; }
@@ -649,6 +695,8 @@
     .site-footer { padding: 42px 0; color: var(--white); background: var(--navy); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.18); }
     .footer-inner p { margin: 0; color: rgba(255, 255, 255, 0.65); font-size: 14px; }
+    .site-footer .social-links a { width: 36px; height: 36px; }
+    .site-footer .social-links svg { width: 16px; height: 16px; }
     .back-to-top { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase; }
 
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 600ms ease, transform 600ms ease; }
@@ -731,7 +779,7 @@
       .field-row { grid-template-columns: 1fr; gap: 0; }
       .contact-panel { width: calc(100% + 28px); margin-left: -14px; }
       .contact-copy, .contact-form { padding-inline: 28px; }
-      .contact-list li { grid-template-columns: 62px 1fr; }
+      .contact-list > li { grid-template-columns: 62px 1fr; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
   </style>
@@ -739,6 +787,22 @@
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Brand glyphs, defined once and referenced by <use> in the contact panel and the footer. -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24">
+      <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.39C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.39 2.12.66.66 1.33 1.08 2.12 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.39.66-.66 1.08-1.33 1.39-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.39-2.12C21.32 1.35 20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z M18.41 4.15a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24">
+      <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>
+    </symbol>
+  </svg>
 
   <header class="site-header" id="top">
     <div class="shell nav-wrap">
@@ -976,6 +1040,15 @@
             <li><span>Email</span><a href="mailto:info@businesssolutionconsult.com">info@businesssolutionconsult.com</a></li>
             <li><span>Web</span><a href="https://www.businesssolutionconsult.com">www.businesssolutionconsult.com</a></li>
             <li><span>Based</span><strong>Ghana</strong></li>
+            <li class="contact-social">
+              <span>Follow</span>
+              <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/bsconsultgh" target="_blank" rel="noopener" aria-label="Business Solution Consult on LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#icon-linkedin"></use></svg></a></li>
+                <li><a href="https://www.facebook.com/bsconsultgh" target="_blank" rel="noopener" aria-label="Business Solution Consult on Facebook"><svg aria-hidden="true" focusable="false"><use href="#icon-facebook"></use></svg></a></li>
+                <li><a href="https://www.instagram.com/bsconsultgh_" target="_blank" rel="noopener" aria-label="Business Solution Consult on Instagram"><svg aria-hidden="true" focusable="false"><use href="#icon-instagram"></use></svg></a></li>
+                <li><a href="https://www.youtube.com/@bsconsultgh" target="_blank" rel="noopener" aria-label="Business Solution Consult on YouTube"><svg aria-hidden="true" focusable="false"><use href="#icon-youtube"></use></svg></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -1021,6 +1094,12 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <p>© <span id="year">2026</span> Business Solution Consult. Insights. Strategy. Growth.</p>
+      <ul class="social-links" aria-label="Business Solution Consult on social media">
+        <li><a href="https://www.linkedin.com/company/bsconsultgh" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#icon-linkedin"></use></svg></a></li>
+        <li><a href="https://www.facebook.com/bsconsultgh" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false"><use href="#icon-facebook"></use></svg></a></li>
+        <li><a href="https://www.instagram.com/bsconsultgh_" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false"><use href="#icon-instagram"></use></svg></a></li>
+        <li><a href="https://www.youtube.com/@bsconsultgh" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true" focusable="false"><use href="#icon-youtube"></use></svg></a></li>
+      </ul>
       <a class="back-to-top" href="#top">Back to top ↑</a>
     </div>
   </footer>
